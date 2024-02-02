@@ -1,0 +1,21 @@
+{
+  "id": "chatcmpl-8nloPL5rmCL7Ou7i9ld624MyAiXHC",
+  "object": "chat.completion",
+  "created": 1706872553,
+  "model": "gpt-4-1106-vision-preview",
+  "usage": {
+    "prompt_tokens": 1148,
+    "completion_tokens": 300,
+    "total_tokens": 1448
+  },
+  "choices": [
+    {
+      "message": {
+        "role": "assistant",
+        "content": "이러한 종류의 복잡한 디지털 아트워크를 만드는 데에는 다양한 소프트웨어 프로그램이 사용될 수 있습니다. 이 이미지와 유사한 매혹적인 판타지 풍경을 만들기 위한 몇 가지 가능한 툴은 다음과 같습니다:\n\n1. **Adobe Photoshop**: 강력한 이미지 편집 및 합성 도구를 제공하며, 아티스트들이 텍스처와 디테일을 만드는 데 널리 사용됩니다. 브러쉬, 레이어, 마스크 및 조정 레이어를 통해 복잡한 효과와 이미지를 만들 수 있습니다.\n\n2. **Corel Painter**: 다양한 미디어와 질감을 디지털로 재현하는데 초점이 맞춰진 그래픽 소프트웨어입니다. 사용자는 여러 종류의 브러쉬와 패턴을 사용하여 자연스러운 회화적"
+      },
+      "finish_reason": "length",
+      "index": 0
+    }
+  ]
+}
