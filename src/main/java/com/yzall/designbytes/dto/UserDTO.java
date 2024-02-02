@@ -10,14 +10,14 @@ import java.time.LocalDateTime;
 @AllArgsConstructor
 @ToString
 public class UserDTO {
-    public Integer userNo;
-    public String userId;
-    public String userName;
-    public String userPassword;
-    public Integer userRole;
-    public char useYn;
-    public LocalDateTime insertDt;
-    public String insertId;
-    public LocalDateTime updateDt;
-    public String updateId;
+    private Integer userNo;
+    private String userId;
+    private String userName;
+    private String userPassword;
+    private Integer userRole;
+    private char useYn;
+    private LocalDateTime insertDt;
+    private String insertId;
+    private LocalDateTime updateDt;
+    private String updateId;
 }

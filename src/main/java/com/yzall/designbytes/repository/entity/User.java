@@ -25,28 +25,28 @@ public class User {
     private String userId;
 
     @Column(name = "user_name")
-    public String userName;
+    private String userName;
 
     @Column(name = "user_password")
-    public String userPassword;
+    private String userPassword;
 
     @Column(name = "user_role")
-    public Integer userRole;
+    private Integer userRole;
 
     @Column(name = "use_yn")
-    public char useYn;
+    private char useYn;
 
     @Column(name = "insert_dt")
-    public LocalDateTime insertDt;
+    private LocalDateTime insertDt;
 
     @Column(name = "insert_id")
-    public String insertId;
+    private String insertId;
 
     @Column(name = "update_dt")
-    public LocalDateTime updateDt;
+    private LocalDateTime updateDt;
 
     @Column(name = "update_id")
-    public String updateId;
+    private String updateId;
 
     public UserDTO toDTO() {
         return new UserDTO(userNo, userId, userName, null, userRole, useYn, insertDt, insertId, updateDt, updateId);
