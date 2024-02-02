@@ -6,9 +6,9 @@ Backend  : openJDK17 + Spring Boot + MySQL
 Frontend : javascript
 
 
-### 프로젝트 실행 방법
-1. [OpenJDK17 설치](https://jiurinie.tistory.com/131)
-
+### 개발 참고 사항
+http://localhost:8080/swagger-ui/index.html#/
+- 프로젝트 실행 후 위 주소로 접속하면 API 명세 확인 가능
 
 ### TODO
 - spring security
