@@ -14,3 +14,10 @@ spring:
     open-in-view: false
 springdoc:
   show-actuator: false
+
+openai:
+  model: gpt-4-vision-preview
+  max-tokens: 300
+  api:
+    url: https://api.openai.com/v1/chat/completions
+    key: TODO
