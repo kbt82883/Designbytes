@@ -10,6 +10,12 @@ Frontend : javascript
 1. [OpenJDK17 설치](https://jiurinie.tistory.com/131)
 
 
+### TODO
+- spring security
+- custom exception
+- jwt
+- length check
+- 상수 처리
 
 
 
