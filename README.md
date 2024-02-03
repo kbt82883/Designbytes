@@ -16,6 +16,7 @@ http://localhost:8080/swagger-ui/index.html#/
 - jwt
 - length check
 - 상수 처리
+- Redis로 request per minute 제한
 
 
 
