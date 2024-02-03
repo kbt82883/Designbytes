@@ -40,3 +40,20 @@ create table user
 )
     comment '회원';
 
+create table ai_response
+(
+    user_no           int                                not null comment '회원번호',
+    ai_id             varchar(100)                       not null comment 'ai 응답 고유 번호'
+        primary key,
+    ai_message        varchar(2000)                      null comment 'ai 응답 내용',
+    ai_prompt         varchar(500)                       null comment 'ai 요청 내용',
+    ai_model          varchar(20)                        not null comment '사용된 ai 모델',
+    prompt_tokens     int      default 0                 not null comment '프롬프트 토큰수',
+    completion_tokens int      default 0                 not null comment '응답 토큰수',
+    total_tokens      int      default 0                 not null comment '최종 토큰수',
+    insert_dt         datetime default CURRENT_TIMESTAMP not null,
+    insert_id         varchar(20)                        not null
+)
+    comment 'AI 처리 결과';
+
+
