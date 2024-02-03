@@ -22,7 +22,7 @@ public class UserController {
 
     /**
      * TODO 기능 추가
-     * 탈퇴, 로그아웃, 정보수정, 비밀번호 변경, 비밀번호 찾기, 아이디 찾기
+     * 로그아웃, 정보수정, 비밀번호 변경, 비밀번호 찾기, 아이디 찾기
      * TODO DB 수정
      * EMAIL, 폰번호, 토큰값
      */
@@ -83,5 +83,24 @@ public class UserController {
         }
     }
 
+    @Operation(summary = "회원 탈퇴", description = "userNo, userId 를 받아서 탈퇴. 성공시 사용자 정보를 반환. 실패시 메시지 반환.")
+    @ApiResponses(value = {
+            @ApiResponse(responseCode = "200", description = "성공",
+                    content = {@Content(schema = @Schema(implementation = ResponseDTO.class))}),
+            @ApiResponse(responseCode = "500", description = "백엔드 코드 에러"),
+    })
+    @PostMapping("/user/delete")
+    public ResponseEntity<ResponseDTO> deleteUser(@RequestBody UserDTO userDTO) {
+        ResponseDTO responseDTO = new ResponseDTO();
+        try {
+            UserDTO result = userService.deleteUser(userDTO);
+            responseDTO.setData(result);
+            responseDTO.setMessage("탈퇴 완료");
+            return new ResponseEntity<>(responseDTO, HttpStatus.OK);
+        } catch (Exception e) {
+            responseDTO.setMessage(e.getMessage());
+            return new ResponseEntity<>(responseDTO, HttpStatus.INTERNAL_SERVER_ERROR);
+        }
+    }
 
 }

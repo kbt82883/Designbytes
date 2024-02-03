@@ -64,4 +64,19 @@ public class UserService {
             throw e;
         }
     }
+
+    @Transactional
+    public UserDTO deleteUser(UserDTO userDTO) throws Exception {
+        try {
+            LocalDateTime nowDate = LocalDateTime.now();
+            int result = userRepository.withDrawByUserNo(nowDate, 'N', nowDate, userDTO.getUserId(), userDTO.getUserNo());
+            if (result != 1) {
+                throw new Exception("사용자 삭제에 실패하였습니다.");
+            }
+            return userDTO;
+        } catch (Exception e) {
+            e.printStackTrace();
+            throw e;
+        }
+    }
 }

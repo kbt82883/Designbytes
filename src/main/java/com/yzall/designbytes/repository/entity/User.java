@@ -36,6 +36,9 @@ public class User {
     @Column(name = "use_yn")
     private char useYn;
 
+    @Column(name = "withdraw_dt")
+    private LocalDateTime withdrawDt;
+
     @Column(name = "insert_dt")
     private LocalDateTime insertDt;
 
