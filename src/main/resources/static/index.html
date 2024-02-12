@@ -3,12 +3,14 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- CSS 파일 -->
   <link rel="stylesheet" href="css/style.css">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Nanum+Gothic&display=swap" rel="stylesheet">
+  <!-- Pretendard 폰트 -->
+  <link rel="stylesheet" as="style" crossorigin href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css" />
   <title>Designbytes</title>
+  <!-- 폰트어썸 -->
   <script src="https://kit.fontawesome.com/7f43aaf77f.js" crossorigin="anonymous"></script>
+  <!-- Script -->
   <script src="script/main.js" defer></script>
 </head>
 <body>
@@ -17,14 +19,9 @@
     <div class="navbar__logo">
       <a href="#">designbytes</a>
     </div>
-    <div class="navbar__menu">
-      <ul>
-        <li><a class="blue-text" href="#">Home</a></li>
-        <li><a href="#">숏폼 강의</a></li>
-      </ul>
-    </div>
     <div class="navbar__auth">
       <ul>
+        <li><a class="blue-text" href="#">AI 학습검색</a></li>
         <li><a href="#">내 보관함</a></li>
         <li><a href="#">Logout</a></li>
       </ul>
@@ -33,14 +30,96 @@
 
   <!-- Search Area -->
   <section class="search-area">
-    <button class="search-btn">
-      <label for="choose-file">이미지로 강의 검색</label>
-      <input type="file" id="choose-file" accept="image/*">
-    </button>
-    <div class="search-area__text">
-      <p><span class="blue-text">이미지를 만들기 위해 내가 들어야 할</span> 강의를 Ai가 찾아줘요</p>
-      <p class="blue-text">(무료)</p>
-    </div>
+    <!-- Img Upload -->
+    <section class="img-upload">
+      <div class="search-area__header">
+        <p><span class="blue-text">이미지를 만들기 위해 내가 들어야 할</span> 강의를 Ai가 찾아줘요 (beta)</p>
+        <p>(현재 beta 버전은 디자인 영역의 강의만 검색가능합니다)</p>
+      </div>
+      <div class="search-area__step1">
+        <span>step1. 찾고 싶은 강의 선택</span>
+        <ul>
+          <li>
+            <button>PS</button>
+            <span>포토샵</span>
+          </li>
+          <li>
+            <button>Ai</button>
+            <span>일러스트</span>
+          </li>
+          <li>
+            <button>F</button>
+            <span>피그마(준비중)</span>
+          </li>
+          <li>
+            <button>XD</button>
+            <span>XD(준비중)</span>
+          </li>
+          <li>
+            <button>St</button>
+            <span>Sketch(준비중)</span>
+          </li>
+        </ul>
+      </div>
+      <div class="search-area__step2">
+        <span>step2.만들고 싶은 이미지 업로드</span>
+        <button class="search-btn">
+          <label for="choose-file">이미지 업로드</label>
+          <input type="file" id="choose-file" accept="image/*">
+        </button>
+      </div>
+    </section>
+
+    <!-- Img Loading -->
+    <section class="img-loading">
+      <div class="cube">
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+      </div>
+      <!-- <span>이미지 분석중</span> -->
+      <p><span class="blue-text">이미지를 만들기 위해 내가 들어야 할</span> 강의를 Ai가 찾는 중이에요 (beta)</p>
+    </section>
+
+    <!-- Result success -->
+    <section class="result-success">
+      <div>
+        <button class="back-search-area">돌아가기</button>
+        <div class="lecture-recommend">
+          <span>design bytes Ai 숏폼 강의 추천</span>
+          <div>
+            <div class="lecture-recommend__img">
+              <span>designbytes ai beta 0.0.1<br><br>내용이 포괄적일 수 있습니다<br>구체적인 학습이 가능하도록 꾸준히 발전하겠습니다</span>
+            </div>
+            <div class="lecture-recommend__lectures">
+              <span>Adobe photoshop</span>
+              <ul>
+                <li><img src="./images/썸네일.png" alt=""></li>
+                <li><img src="./images/썸네일.png" alt=""></li>
+                <li><img src="./images/썸네일.png" alt=""></li>
+                <li><img src="./images/썸네일.png" alt=""></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="result-comment">
+        <div class="result-comment__ai">
+          <div class="result-comment__ai__logo">
+            <img src="./images/logo.png" alt="">
+          </div>
+          <span>designbytes ai (beta)</span>
+        </div>
+        <div class="result-comment__text-area">
+          <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Fuga, impedit facilis reprehenderit voluptas, eius officiis itaque hic velit nostrum veniam ullam iure facere quisquam eveniet adipisci fugit, praesentium libero quibusdam!</p>
+        </div>
+      </div>  
+      
+    </section>
   </section>
 
   <!-- section-content -->
