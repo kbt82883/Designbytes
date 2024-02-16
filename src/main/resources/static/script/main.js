@@ -1,21 +1,50 @@
-// 찾고 싶은 강의 선택 버튼 누르기
+// html Elems
+// Img Upload
 const lectureButtons = document.querySelectorAll('.search-area__step1 ul li button');
 const lectureSpans = document.querySelectorAll('.search-area__step1 ul li span');
+const chooseFile = document.querySelector('#choose-file');
+const imgUpload = document.querySelector('.img-upload');
+const searchBtn = document.querySelector('.search-btn');
+const searchBtnLabel = document.querySelector('.search-btn label');
 
+// Img Loading
+const imgLoading = document.querySelector('.img-loading');
+
+// Result success
+const resultSuccess = document.querySelector('.result-success');
+
+// Section Content
+const sectionContent = document.querySelector('.section-content');
+
+
+// 찾고 싶은 강의 선택 버튼 누르기
 for(let i = 0; i < lectureButtons.length; i++) {
 	lectureButtons[i].addEventListener('click', () => {
         lectureButtons[i].classList.toggle('clicked');
         lectureSpans[i].classList.toggle('clicked');
     })
-}
+};
+
+// 찾고 싶은 강의 선택 버튼 안누르고 이미지 업로드하면 경고창
+searchBtnLabel.addEventListener('click', () => {
+    let num = 0;
+
+    for (let i = 0; i < lectureButtons.length; i++) {
+        if (lectureButtons[i].classList.contains('clicked')) {
+            num += 1;
+        };
+    }
+
+    if (num === 0) {
+        chooseFile.disabled = true;
+        alert('찾고 싶은 강의를 선택해주세요.');
+    } else {
+        chooseFile.disabled = false;
+    };
+});
+
 
 // '이미지 업로드' 버튼 누르면 이미지 분석 로딩
-const imgLoading = document.querySelector('.img-loading');
-const chooseFile = document.querySelector('#choose-file');
-const imgUpload = document.querySelector('.img-upload');
-const resultSuccess = document.querySelector('.result-success');
-const sectionContent = document.querySelector('.section-content');
-
 chooseFile.addEventListener('input', () => {
     imgUpload.style.visibility = 'hidden';
     imgLoading.style.visibility = 'visible';
