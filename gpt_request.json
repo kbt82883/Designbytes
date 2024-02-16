@@ -1,0 +1,21 @@
+{
+  "model": "gpt-4-vision-preview",
+  "messages": [
+    {
+      "role": "user",
+      "content": [
+        {
+          "type": "text",
+          "text": "이 이미지를 컴퓨터를 사용해서 그리려면 무슨 툴들을 써야할까요?"
+        },
+        {
+          "type": "image_url",
+          "image_url": {
+            "url": "https://img.freepik.com/premium-photo/magical-flowing-castle-digital-illustration_379823-4373.jpg?w=1380"
+          }
+        }
+      ]
+    }
+  ],
+  "max_tokens": 300
+}
