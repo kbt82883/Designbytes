@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- CSS 파일 -->
+    <link rel="stylesheet" href="css/style.css" />
+    <!-- Pretendard 폰트 -->
+    <link
+      rel="stylesheet"
+      as="style"
+      crossorigin
+      href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css"
+    />
+    <!-- animate.css -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+    />
+    <title>Designbytes</title>
+    <!-- 폰트어썸 -->
+    <script
+      src="https://kit.fontawesome.com/7f43aaf77f.js"
+      crossorigin="anonymous"
+    ></script>
+    <!-- Script -->
+    <script src="script/product.js" defer></script>
+  </head>
+  <body>
+    <section id="inner">
+      <!-- Navbar -->
+      <nav class="navbar">
+        <div class="navbar__logo">
+          <a href="home.html" class="blue-text">designbytes</a>
+        </div>
+        <div class="search-tab">
+          <label for="search"
+            ><i class="fa-solid fa-magnifying-glass"></i
+          ></label>
+          <input id="search" type="text" placeholder="학습검색" />
+        </div>
+        <div class="navbar__auth">
+          <ul>
+            <li><a href="AiSearch.html">AI 학습검색</a></li>
+            <li>
+              <a href="#"><img src="images/navbar_bag.png" alt="" /></a>
+            </li>
+            <li>
+              <a href="#"><img src="images/navbar_user.png" alt="" /></a>
+            </li>
+            <li><a href="#">logout</a></li>
+          </ul>
+        </div>
+      </nav>
+
+      <!-- ProdImage -->
+      <div class="prod-image-and-prod-inform">
+        <section class="prod-image">
+          <div class="prod-image__zoom">
+            <img src="images/video_thumbnail.png" alt="" />
+          </div>
+          <div class="prod-image__label">
+            <button><i class="fa-solid fa-chevron-left"></i></button>
+            <div class="prod-image__label__scroll">
+              <img src="images/video_thumbnail.png" alt="" />
+              <img src="images/video_thumbnail.png" alt="" />
+              <img src="images/video_thumbnail.png" alt="" />
+              <img src="images/video_thumbnail.png" alt="" />
+            </div>
+            <button><i class="fa-solid fa-chevron-right"></i></button>
+          </div>
+        </section>
+
+        <!-- ProdInform -->
+        <section class="prod-inform">
+          <div class="prod-inform__header">
+            <span class="prod-inform__header__made-by"
+              >디자인바이츠 자체제작</span
+            >
+            <span class="prod-inform__header__title"
+              >포토샵 원본파일 - 2024 나무소스 5종 (판매자 직접제작)</span
+            >
+            <span class="prod-inform__header__price">15,000 원</span>
+            <button class="prod-inform__header__share">
+              <img src="images/icon/share.png" alt="" />
+            </button>
+          </div>
+          <hr />
+          <div class="prod-inform__description">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestias
+            adipisci odio a quaerat accusantium, quibusdam molestiae hic quo.
+            Sit quis ipsa sapiente iure illum labore maiores qui, mollitia
+            aperiam possimus.
+          </div>
+          <div class="prod-inform__buy">
+            <button class="prod-inform__buy__cart-btn">장바구니</button>
+            <button class="prod-inform__buy__buy-btn">구매하기</button>
+          </div>
+        </section>
+      </div>
+
+      <!-- ProdDetail -->
+      <div class="prod-detail-and-prod-etc">
+        <section class="prod-detail">
+          <div class="prod-detail__header">학습자료 기본 정보</div>
+          <hr />
+          <div class="prod-detail__file-size">
+            <span>파일 크기</span>
+            <span>23.5 mb</span>
+          </div>
+          <hr />
+          <div class="prod-detail__file-type">
+            <span>파일 확장자</span>
+            <span>psd</span>
+          </div>
+        </section>
+
+        <!-- ProdEtc -->
+        <section class="prod-etc">
+          <div class="prod-etc__header">안내사항</div>
+          <hr />
+          <div class="prod-etc__precaution">
+            <div class="prod-etc__tabs">
+              구매 유의사항
+              <button><i class="fa-solid fa-chevron-down"></i></button>
+
+            </div>
+            <span class="prod-etc__summary hidden"
+              >Lorem ipsum dolor sit, amet consectetur adipisicing elit. Libero
+              minima dicta ducimus id natus debitis illum aliquid reiciendis
+              voluptate pariatur animi, fugiat, reprehenderit ex? Reiciendis non
+              consequatur neque doloribus modi.</span
+            >
+          </div>
+          <hr />
+          <div class="prod-etc__delivery-return">
+            <div class="prod-etc__tabs">
+              교환 및 반품
+              <button><i class="fa-solid fa-chevron-down"></i></button>
+
+            </div>
+            <span class="prod-etc__summary hidden"
+              >Lorem ipsum dolor sit, amet consectetur adipisicing elit. Alias
+              minus illo excepturi asperiores nobis modi ipsum possimus quaerat
+              inventore laborum vitae dolor provident ut, fuga, nostrum
+              perferendis? Eum, veritatis doloribus!</span
+            >
+          </div>
+          <hr />
+          <div class="prod-etc__inquiry">
+            <div class="prod-etc__tabs">
+              제품문의
+              <button><i class="fa-solid fa-chevron-down"></i></button>
+
+            </div>
+            <span class="prod-etc__summary hidden"
+              >Lorem ipsum dolor, sit amet consectetur adipisicing elit. Id nisi
+              architecto vel eveniet, quae harum commodi eaque, voluptatem rerum
+              illum saepe ex aliquam reprehenderit distinctio veniam voluptas,
+              officia odit corrupti.</span
+            >
+          </div>
+        </section>
+      </div>
+    </section>
+
+    <footer>
+      <section>
+        <span>designbytes</span>
+      </section>
+    </footer>
+  </body>
+</html>

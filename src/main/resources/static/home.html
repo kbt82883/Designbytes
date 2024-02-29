@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- CSS 파일 -->
+    <link rel="stylesheet" href="css/style.css" />
+    <!-- Pretendard 폰트 -->
+    <link
+      rel="stylesheet"
+      as="style"
+      crossorigin
+      href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css"
+    />
+    <!-- animate.css -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+    />
+    <title>Designbytes</title>
+    <!-- 폰트어썸 -->
+    <script
+      src="https://kit.fontawesome.com/7f43aaf77f.js"
+      crossorigin="anonymous"
+    ></script>
+    <!-- Script -->
+    <script src="script/home.js" defer></script>
+  </head>
+  <body>
+    <section id="inner">
+      <!-- Navbar -->
+      <nav class="navbar">
+        <div class="navbar__logo">
+          <a href="Home.html" class="blue-text">designbytes</a>
+        </div>
+        <div class="search-tab">
+          <label for="search"
+            ><i class="fa-solid fa-magnifying-glass"></i
+          ></label>
+          <input id="search" type="text" placeholder="학습검색" />
+        </div>
+        <div class="navbar__auth">
+          <ul>
+            <li><a href="ai_search.html">AI 학습검색</a></li>
+            <li><a href="#"><img src="images/navbar_bag.png" alt=""></a></li>
+            <li><a href="#"><img src="images/navbar_user.png" alt=""></a></li>
+            <li><a href="#">logout</a></li>
+          </ul>
+        </div>
+      </nav>
+
+      <!-- Banner -->
+      <section class="banner">
+        <div class="slide slide_wrap">
+          <img class="slide_item item1" src="images/banner01.png" alt="" />
+          <img class="slide_item item2" src="images/banner01.png" alt="" />
+          <img class="slide_item item3" src="images/banner01.png" alt="" />
+          <img class="slide_item item4" src="images/banner01.png" alt="" />
+          <img class="slide_item item5" src="images/banner01.png" alt="" />
+          <ul class="slide_pagination"></ul>
+        </div>
+      </section>
+
+      <!-- NewContents -->
+      <section class="new-contents">
+        <div class="new-contents__header">
+          <div>
+            <span>신규 숏폼</span>
+            <span>new</span>
+          </div>
+          <button>더보기</button>
+        </div>
+        <div class="new-contents__items">
+          <ul>
+            <li><img src="images/video_thumbnail.png" alt="" /></li>
+            <li><img src="images/video_thumbnail.png" alt="" /></li>
+            <li><img src="images/video_thumbnail.png" alt="" /></li>
+          </ul>
+        </div>
+      </section>
+
+      <!-- Category -->
+      <section class="category">
+        <span>카테고리</span>
+        <div>
+          <div class="category__all">
+            <span class="category__span01">ALL</span>
+            <span class="category__span02">전체보기</span>
+          </div>
+          <button class="category__prev">
+            <i class="fa-solid fa-chevron-left"></i>
+          </button>
+          <div class="category__items">
+            <ul>
+              <li class="category__photoshop">
+                <div>
+                  <span class="category__span01">Photoshop</span>
+                  <span class="category__span02">포토샵 강의</span>
+                </div>
+                <img src="images/photoshop_logo.png" alt="" />
+              </li>
+              <li class="category__illustrator">
+                <div>
+                  <span class="category__span01">illustrator</span>
+                  <span class="category__span02">일러스트레이터 강의</span>
+                </div>
+                <img src="images/illustrator_logo.png" alt="" />
+              </li>
+              <li class="category__figma">
+                <div>
+                  <span class="category__span01">Figma</span>
+                  <span class="category__span02">피그마 강의</span>
+                </div>
+                <img src="images/figma_logo.png" alt="" />
+              </li>
+              <li class="category__sketch-up">
+                <div>
+                  <span class="category__span01">sketch up</span>
+                  <span class="category__span02">스케치업 강의</span>
+                </div>
+                <img src="images/sketch_up_logo.png" alt="" />
+              </li>
+            </ul>
+          </div>
+          <button class="category__next">
+            <i class="fa-solid fa-chevron-right"></i>
+          </button>
+        </div>
+      </section>
+
+      <!-- MainContents -->
+      <section class="main-contents">
+        <div class="search-tab">
+          <label for="search02"
+            ><i class="fa-solid fa-magnifying-glass"></i
+          ></label>
+          <input id="search02" type="text" placeholder="학습검색" />
+        </div>
+
+        <!-- 일단  영상 4개만 -->
+        <ul class="main-contents__list">
+          <li class="main-contents__videos">
+            <div>
+              <div class="main-contents__videos__thumb">
+                <img src="images/video_thumbnail.png" alt="" />
+                <span class="video-run-time">01:35</span>
+              </div>
+              <div class="main-contents__videos__btn">
+                <button><i class="fa-regular fa-bookmark"></i> 보관하기</button>
+                <button onClick="location.href='Product.html'"><i class="fa-solid fa-download"></i> 원본파일</button>
+              </div>
+            </div>
+            <div>
+              <span class="video-title"
+                >포토샵 항상 같은 설정값으로 파일 생성하기</span
+              >
+              <span class="video-channel-name">디자인 바이츠 자체제작</span>
+            </div>
+          </li>
+          <li class="main-contents__videos">
+            <div>
+              <div class="main-contents__videos__thumb">
+                <img src="images/video_thumbnail.png" alt="" />
+                <span class="video-run-time">01:35</span>
+              </div>
+              <div class="main-contents__videos__btn">
+                <button><i class="fa-regular fa-bookmark"></i> 보관하기</button>
+                <button onClick="location.href='Product.html'"><i class="fa-solid fa-download"></i> 원본파일</button>
+              </div>
+            </div>
+            <div>
+              <span class="video-title"
+                >포토샵 항상 같은 설정값으로 파일 생성하기</span
+              >
+              <span class="video-channel-name">디자인 바이츠 자체제작</span>
+            </div>
+          </li>
+          <li class="main-contents__videos">
+            <div>
+              <div class="main-contents__videos__thumb">
+                <img src="images/video_thumbnail.png" alt="" />
+                <span class="video-run-time">01:35</span>
+              </div>
+              <div class="main-contents__videos__btn">
+                <button><i class="fa-regular fa-bookmark"></i> 보관하기</button>
+                <button onClick="location.href='Product.html'"><i class="fa-solid fa-download"></i> 원본파일</button>
+              </div>
+            </div>
+            <div>
+              <span class="video-title"
+                >포토샵 항상 같은 설정값으로 파일 생성하기</span
+              >
+              <span class="video-channel-name">디자인 바이츠 자체제작</span>
+            </div>
+          </li>
+          <li class="main-contents__videos">
+            <div>
+              <div class="main-contents__videos__thumb">
+                <img src="images/video_thumbnail.png" alt="" />
+                <span class="video-run-time">01:35</span>
+              </div>
+              <div class="main-contents__videos__btn">
+                <button><i class="fa-regular fa-bookmark"></i> 보관하기</button>
+                <button onClick="location.href='Product.html'"><i class="fa-solid fa-download"></i> 원본파일</button>
+              </div>
+            </div>
+            <div>
+              <span class="video-title"
+                >포토샵 항상 같은 설정값으로 파일 생성하기</span
+              >
+              <span class="video-channel-name">디자인 바이츠 자체제작</span>
+            </div>
+          </li>
+        </ul>
+      </section>
+    </section>
+
+
+
+
+    
+    <footer>
+      <section>
+        <span>designbytes</span>
+      </section>
+    </footer>
+  </body>
+</html>

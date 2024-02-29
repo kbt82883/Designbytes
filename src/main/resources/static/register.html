@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Designbytes</title>
+  </head>
+  <body>
+    <section class="register-wrapper">
+      <div class="register__header">
+        <span>designbytes</span>
+        <span>디자인바이츠에서 10배 빠르게 10배 싸게<br />쪼개서 공부하자</span>
+      </div>
+    </section>
+    <button class="login-with-kakao">카카오로 로그인</button>
+    <button class="login-with-google">구글아이디로 로그인</button>
+
+    <!-- 로그인 -->
+    <h2>로그인</h2>
+    <form method="post" action="" id="login-form">
+      <input type="text" name="userName" placeholder="이메일" />
+      <input type="password" name="userPassword" placeholder="비밀번호" />
+      <label for="remember-check">
+        <input type="checkbox" id="remember-check" />아이디 저장하기
+      </label>
+      <input type="submit" value="로그인" />
+    </form>
+    <button class="register-with-email">이메일로 회원가입</button>
+
+    <!-- 회원가입 -->
+    <h2>회원가입</h2>
+    <form method="post" action="" id="login-form">
+      <input type="text" name="userName" placeholder="이메일" />
+      <input type="password" name="userPassword" placeholder="비밀번호" />
+      <input type="password" name="userPassword" placeholder="비밀번호 확인" />
+      <input type="submit" value="이메일로 회원가입 완료하기" />
+    </form>
+
+    <input type="email" placeholder="이메일">
+    <button>인증메일 발송</button>
+    
+    <input type="text" placeholder="인증번호">
+    <button>확인</button>
+  </body>
+</html>
