@@ -56,4 +56,20 @@ create table ai_response
 )
     comment 'AI 처리 결과';
 
+create table design_bytes.video
+(
+    video_no           int auto_increment
+        primary key,
+    video_title        varchar(20)   not null comment '영상 제목',
+    video_url          varchar(2083) null comment 'url',
+    video_running_time int           not null comment '영상 길이(ms)',
+    video_maker_id     varchar(20)   null comment '제작자id',
+    video_maker_name   varchar(20)   null comment '제작자명',
+    video_file_size    int           not null comment '파일사이즈(mb)',
+    video_paid_yn      char          not null comment '유료여부(y: 유료, n: 무료)',
+    video_price        int           null comment '영상가격()',
+    video_thumbnail_id int           null comment '썸네일ID'
+)
+    comment '영상';
+
 
