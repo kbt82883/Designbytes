@@ -23,32 +23,31 @@
       src="https://kit.fontawesome.com/7f43aaf77f.js"
       crossorigin="anonymous"
     ></script>
-    <!-- Script -->
-    <script src="script/home.js" defer></script>
   </head>
   <body>
+    <!-- Navbar -->
+    <nav class="navbar">
+      <div class="navbar__logo">
+        <a href="Home.html" class="blue-text">designbytes</a>
+      </div>
+      <div class="search-tab">
+        <label for="search"><i class="fa-solid fa-magnifying-glass"></i></label>
+        <input id="search" type="text" placeholder="학습검색" />
+      </div>
+      <div class="navbar__auth">
+        <ul>
+          <li><a href="ai_search.html">AI 학습검색</a></li>
+          <li>
+            <a href="#"><img src="images/navbar_bag.png" alt="" /></a>
+          </li>
+          <li>
+            <a href="#"><img src="images/navbar_user.png" alt="" /></a>
+          </li>
+          <li><a href="#">logout</a></li>
+        </ul>
+      </div>
+    </nav>
     <section id="inner">
-      <!-- Navbar -->
-      <nav class="navbar">
-        <div class="navbar__logo">
-          <a href="Home.html" class="blue-text">designbytes</a>
-        </div>
-        <div class="search-tab">
-          <label for="search"
-            ><i class="fa-solid fa-magnifying-glass"></i
-          ></label>
-          <input id="search" type="text" placeholder="학습검색" />
-        </div>
-        <div class="navbar__auth">
-          <ul>
-            <li><a href="ai_search.html">AI 학습검색</a></li>
-            <li><a href="#"><img src="images/navbar_bag.png" alt=""></a></li>
-            <li><a href="#"><img src="images/navbar_user.png" alt=""></a></li>
-            <li><a href="#">logout</a></li>
-          </ul>
-        </div>
-      </nav>
-
       <!-- Banner -->
       <section class="banner">
         <div class="slide slide_wrap">
@@ -58,24 +57,6 @@
           <img class="slide_item item4" src="images/banner01.png" alt="" />
           <img class="slide_item item5" src="images/banner01.png" alt="" />
           <ul class="slide_pagination"></ul>
-        </div>
-      </section>
-
-      <!-- NewContents -->
-      <section class="new-contents">
-        <div class="new-contents__header">
-          <div>
-            <span>신규 숏폼</span>
-            <span>new</span>
-          </div>
-          <button>더보기</button>
-        </div>
-        <div class="new-contents__items">
-          <ul>
-            <li><img src="images/video_thumbnail.png" alt="" /></li>
-            <li><img src="images/video_thumbnail.png" alt="" /></li>
-            <li><img src="images/video_thumbnail.png" alt="" /></li>
-          </ul>
         </div>
       </section>
 
@@ -141,13 +122,17 @@
         <ul class="main-contents__list">
           <li class="main-contents__videos">
             <div>
-              <div class="main-contents__videos__thumb">
-                <img src="images/video_thumbnail.png" alt="" />
-                <span class="video-run-time">01:35</span>
-              </div>
+              <a href="play.html"
+                ><div class="main-contents__videos__thumb">
+                  <img src="images/video_thumbnail.png" alt="" />
+                  <span class="video-run-time">01:35</span>
+                </div></a
+              >
               <div class="main-contents__videos__btn">
                 <button><i class="fa-regular fa-bookmark"></i> 보관하기</button>
-                <button onClick="location.href='Product.html'"><i class="fa-solid fa-download"></i> 원본파일</button>
+                <button onClick="location.href='Product.html'">
+                  <i class="fa-solid fa-download"></i> 원본파일
+                </button>
               </div>
             </div>
             <div>
@@ -159,13 +144,17 @@
           </li>
           <li class="main-contents__videos">
             <div>
-              <div class="main-contents__videos__thumb">
-                <img src="images/video_thumbnail.png" alt="" />
-                <span class="video-run-time">01:35</span>
-              </div>
+              <a href="play.html"
+                ><div class="main-contents__videos__thumb">
+                  <img src="images/video_thumbnail.png" alt="" />
+                  <span class="video-run-time">01:35</span>
+                </div></a
+              >
               <div class="main-contents__videos__btn">
                 <button><i class="fa-regular fa-bookmark"></i> 보관하기</button>
-                <button onClick="location.href='Product.html'"><i class="fa-solid fa-download"></i> 원본파일</button>
+                <button onClick="location.href='Product.html'">
+                  <i class="fa-solid fa-download"></i> 원본파일
+                </button>
               </div>
             </div>
             <div>
@@ -177,13 +166,17 @@
           </li>
           <li class="main-contents__videos">
             <div>
-              <div class="main-contents__videos__thumb">
-                <img src="images/video_thumbnail.png" alt="" />
-                <span class="video-run-time">01:35</span>
-              </div>
+              <a href="play.html"
+                ><div class="main-contents__videos__thumb">
+                  <img src="images/video_thumbnail.png" alt="" />
+                  <span class="video-run-time">01:35</span>
+                </div></a
+              >
               <div class="main-contents__videos__btn">
                 <button><i class="fa-regular fa-bookmark"></i> 보관하기</button>
-                <button onClick="location.href='Product.html'"><i class="fa-solid fa-download"></i> 원본파일</button>
+                <button onClick="location.href='Product.html'">
+                  <i class="fa-solid fa-download"></i> 원본파일
+                </button>
               </div>
             </div>
             <div>
@@ -195,13 +188,17 @@
           </li>
           <li class="main-contents__videos">
             <div>
-              <div class="main-contents__videos__thumb">
-                <img src="images/video_thumbnail.png" alt="" />
-                <span class="video-run-time">01:35</span>
-              </div>
+              <a href="play.html"
+                ><div class="main-contents__videos__thumb">
+                  <img src="images/video_thumbnail.png" alt="" />
+                  <span class="video-run-time">01:35</span>
+                </div></a
+              >
               <div class="main-contents__videos__btn">
                 <button><i class="fa-regular fa-bookmark"></i> 보관하기</button>
-                <button onClick="location.href='Product.html'"><i class="fa-solid fa-download"></i> 원본파일</button>
+                <button onClick="location.href='Product.html'">
+                  <i class="fa-solid fa-download"></i> 원본파일
+                </button>
               </div>
             </div>
             <div>
@@ -215,14 +212,19 @@
       </section>
     </section>
 
-
-
-
-    
     <footer>
       <section>
         <span>designbytes</span>
       </section>
     </footer>
+
+    <script
+      src="https://code.jquery.com/jquery-3.7.1.min.js"
+      integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo="
+      crossorigin="anonymous"
+    ></script>
+
+    <!-- Script -->
+    <script src="script/home.js"></script>
   </body>
 </html>

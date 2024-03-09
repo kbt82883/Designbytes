@@ -21,41 +21,30 @@ const resultSuccess = document.querySelector(".result-success");
 const sectionContent = document.querySelector(".section-content");
 
 // 찾고 싶은 강의 선택 버튼 누르기
-for (let i = 0; i < lectureButtons.length; i++) {
-  lectureButtons[i].addEventListener("click", () => {
-    lectureButtons[i].classList.toggle("clicked");
-    lectureSpans[i].classList.toggle("clicked");
-  });
-}
+$(".search-area__step1 ul li button").click(function (e) {
+  $(this).toggleClass("clicked").next().toggleClass("clicked");
+});
 
 // 찾고 싶은 강의 선택 버튼 안누르고 이미지 업로드하면 경고창
-searchBtnLabel.addEventListener("click", () => {
-  let num = 0;
-
-  for (let i = 0; i < lectureButtons.length; i++) {
-    if (lectureButtons[i].classList.contains("clicked")) {
-      num += 1;
-    }
-  }
-
-  if (num === 0) {
-    chooseFile.disabled = true;
+$(".search-btn label").click(function (e) {
+  if (!$(".search-area__step1 ul li button").hasClass("clicked")) {
+    $("#choose-file").attr("disabled", "true");
     alert("찾고 싶은 강의를 선택해주세요.");
   } else {
-    chooseFile.disabled = false;
+    $("#choose-file").removeAttr("disabled");
   }
 });
 
 // '이미지 업로드' 버튼 누르면 이미지 분석 로딩
-chooseFile.addEventListener("input", () => {
-  imgUpload.style.visibility = "hidden";
-  imgLoading.style.visibility = "visible";
-  sectionContent.style.display = "none";
+$("#choose-file").change(function (e) {
+  $(".img-upload").css("visibility", "hidden");
+  $(".img-loading").css("visibility", "visible");
+  $(".section-content").css("display", "none");
 
   // 이미지 분석 끝나면(1초 후) 결과 보여주기
   setTimeout(() => {
-    imgLoading.style.visibility = "hidden";
-    resultSuccess.style.visibility = "visible";
+    $(".img-loading").css("visibility", "hidden");
+    $(".result-success").css("visibility", "visible");
   }, 1000);
 });
 

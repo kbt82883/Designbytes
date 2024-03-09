@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- CSS 파일 -->
+    <link rel="stylesheet" href="css/style.css" />
+    <!-- Pretendard 폰트 -->
+    <link
+      rel="stylesheet"
+      as="style"
+      crossorigin
+      href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css"
+    />
+    <!-- animate.css -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+    />
+    <title>Designbytes</title>
+    <!-- 폰트어썸 -->
+    <script
+      src="https://kit.fontawesome.com/7f43aaf77f.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body>
+    <!-- Navbar -->
+    <nav class="navbar">
+      <div class="navbar__logo">
+        <a href="Home.html" class="blue-text">designbytes</a>
+      </div>
+      <div class="search-tab">
+        <label for="search"><i class="fa-solid fa-magnifying-glass"></i></label>
+        <input id="search" type="text" placeholder="학습검색" />
+      </div>
+      <div class="navbar__auth">
+        <ul>
+          <li><a href="ai_search.html">AI 학습검색</a></li>
+          <li>
+            <a href="#"><img src="images/navbar_bag.png" alt="" /></a>
+          </li>
+          <li>
+            <a href="#"><img src="images/navbar_user.png" alt="" /></a>
+          </li>
+          <li><a href="#">logout</a></li>
+        </ul>
+      </div>
+    </nav>
+    <section id="inner">
+      <!-- videoPlayer -->
+      <section class="video-player">
+        <div class="video-player__youtube-wrapper">
+          <iframe
+            src="https://www.youtube.com/embed/xMvXZVpnJV8?si=tV-HzUi-CszxfPwf"
+            title="YouTube video player"
+            frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            allowfullscreen
+          ></iframe>
+        </div>
+        <div class="video-player__desciption">
+          <p class="video-player__desciption__made-by">디자인바이츠 자체제작</p>
+          <h1 class="video-player__desciption__title">
+            알아두면 편리한 포토샵 항상 같은 설정값으로 파일 생성하기
+          </h1>
+          <p class="video-player__desciption__length">학습 길이 01:36</p>
+        </div>
+      </section>
+    </section>
+
+    <footer>
+      <section>
+        <span>designbytes</span>
+      </section>
+    </footer>
+  </body>
+</html>

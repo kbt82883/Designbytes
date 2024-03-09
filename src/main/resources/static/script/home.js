@@ -1,24 +1,3 @@
-// 카테고리 버튼 효과
-const categoryAll = document.querySelector(".category__all");
-const categoryItemsList = document.querySelectorAll(".category__items ul li");
-
-categoryAll.addEventListener("click", () => {
-  categoryAll.classList.toggle("clicked");
-  for (let i = 0; i < categoryItemsList.length; i++) {
-    categoryItemsList[i].classList.add("clicked");
-  }
-});
-
-for (let i = 0; i < categoryItemsList.length; i++) {
-  categoryItemsList[i].addEventListener("click", () => {
-    categoryItemsList[i].classList.toggle("clicked");
-
-    if (!categoryItemsList[i].classList.contains("clicked")) {
-      categoryAll.classList.remove("clicked");
-    }
-  });
-}
-
 // Banner 자동 슬라이드
 // 슬라이크 전체 크기(width 구하기)
 const slide = document.querySelector(".slide");
@@ -177,24 +156,35 @@ slide.addEventListener("mouseout", () => {
   }, 3000);
 });
 
-// 영상 보관하기 클릭시 효과
-const BookmarkBtn = document.querySelectorAll(
-  ".main-contents__videos__btn button:nth-child(1)"
-);
+// 카테고리 버튼 효과
+$(".category__all").click(function () {
+  if (!$(".category__all").hasClass("clicked")) {
+    $(".category__all").addClass("clicked");
+    $(".category__items ul li").addClass("clicked");
+  } else {
+    $(".category__all").removeClass("clicked");
+    $(".category__items ul li").removeClass("clicked");
+  }
+});
 
-for (let i = 0; i < BookmarkBtn.length; i++) {
-  BookmarkBtn[i].addEventListener("click", () => {
-    if (
-      BookmarkBtn[i].innerHTML ===
+$(".category__items ul li").click(function (e) {
+  $(this).toggleClass("clicked");
+  if (!$(this).hasClass("clicked")) {
+    $(".category__all").removeClass("clicked");
+  }
+});
+
+$(".main-contents__videos__btn button:nth-child(1)").click(function () {
+  if (
+    $(this).html() ===
+    '<i class="fa-regular fa-bookmark" aria-hidden="true"></i> 보관하기'
+  ) {
+    $(this).html(
+      '<i class="fa-solid fa-bookmark animate__animated animate__rubberBand" style="color: #2858ff;"></i> 보관됨'
+    );
+  } else {
+    $(this).html(
       '<i class="fa-regular fa-bookmark" aria-hidden="true"></i> 보관하기'
-    ) {
-      BookmarkBtn[i].innerHTML = '<i class="fa-solid fa-bookmark animate__animated animate__rubberBand" style="color: #2858ff;"></i> 보관됨';
-    } else {
-      BookmarkBtn[i].innerHTML =
-        '<i class="fa-regular fa-bookmark" aria-hidden="true"></i> 보관하기';
-    }
-
-    
-  });
-}
-
+    );
+  }
+});
