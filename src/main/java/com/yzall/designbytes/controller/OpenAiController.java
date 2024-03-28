@@ -18,7 +18,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 @RestController
-@RequestMapping("/api")
+@RequestMapping("/api/openai")
 @Tag(name = "GPT VISION AI", description = "이미지 분석 관련 API")
 public class OpenAiController {
 
@@ -38,7 +38,7 @@ public class OpenAiController {
             @ApiResponse(responseCode = "423", description = "단기간내 너무 많은 요청 TODO"),
             @ApiResponse(responseCode = "500", description = "백엔드 코드 에러"),
     })
-    @PostMapping("/openai/vision")
+    @PostMapping("/vision")
     public ResponseEntity<ResponseDTO> getVisionData(@RequestBody VisionDTO visionDTO) {
 
         // TODO 인증 처리
