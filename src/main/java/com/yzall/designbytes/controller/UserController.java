@@ -39,6 +39,7 @@ public class UserController {
             @ApiResponse(responseCode = "200", description = "성공",
                     content = {@Content(schema = @Schema(implementation = ResponseDTO.class))}),
             @ApiResponse(responseCode = "409", description = "해당 ID의 유저가 중복됨."),
+            @ApiResponse(responseCode = "411", description = "필수 값이 누락됨."),
             @ApiResponse(responseCode = "500", description = "백엔드 코드 에러"),
     })
     @PostMapping("/user/create")
@@ -49,6 +50,9 @@ public class UserController {
             responseDTO.setData(result);
             responseDTO.setMessage("사용자 생성에 성공하였습니다.");
             return new ResponseEntity<>(responseDTO, HttpStatus.OK);
+        } catch (NullPointerException e) {
+            responseDTO.setMessage("필수값이 누락되었습니다.");
+            return new ResponseEntity<>(responseDTO, HttpStatus.LENGTH_REQUIRED);
         } catch (DataIntegrityViolationException e) {
             responseDTO.setMessage("해당 ID는 이미 존재합니다.");
             return new ResponseEntity<>(responseDTO, HttpStatus.CONFLICT);
