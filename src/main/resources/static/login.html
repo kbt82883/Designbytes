@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Designbytes</title>
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <section class="login-wrapper">
+      <div class="login-wrapper__logo">
+        <img src="images/logo.png" alt="" />
+        <span>designbytes</span>
+      </div>
+      <div class="login-wrapper__header">
+        <p>디자인바이츠에서 10배 빠르게 10배 싸게</p>
+        <p>쪼개서 공부하자</p>
+      </div>
+
+      <!-- 로그인 -->
+      <section class="login-container">
+        <div class="login-container__login-btns">
+          <button class="login-with-kakao">
+            <img src="images/icon/kakao_logo.png" alt="" />카카오로 로그인
+          </button>
+          <button class="login-with-google">
+            <img src="images/icon/google_logo.png" alt="" />구글아이디로 로그인
+          </button>
+        </div>
+
+        <hr />
+
+        <div class="login-container__login-form">
+          <form method="post" action="" id="login-form">
+            <input type="email" name="userId" placeholder="이메일" />
+            <input type="password" name="userPassword" placeholder="비밀번호" />
+            <input type="submit" value="로그인" />
+          </form>
+          <button class="register-with-email">이메일로 회원가입</button>
+        </div>
+      </section>
+
+      <!-- 회원가입 -->
+      <section class="register-container" style="display: none">
+        <form id="register-form">
+          <input type="text" name="userName" placeholder="이름" />
+          <input type="email" name="userId" placeholder="이메일" />
+          <input type="password" name="userPassword" placeholder="비밀번호" />
+          <input
+            type="password"
+            name="userPassword"
+            placeholder="비밀번호 확인"
+          />
+          <input
+            type="submit"
+            id="register-submit"
+            value="이메일로 회원가입 완료하기"
+          />
+        </form>
+
+        <section class="register-container__check" style="display: none">
+          <input type="email" placeholder="이메일" />
+          <button>인증메일 발송</button>
+
+          <input type="text" placeholder="인증번호" />
+          <button>확인</button>
+        </section>
+      </section>
+    </section>
+
+    <footer>
+      <section>
+        <span>designbytes</span>
+      </section>
+    </footer>
+
+
+    <script
+      src="https://code.jquery.com/jquery-3.7.1.min.js"
+      integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo="
+      crossorigin="anonymous"
+    ></script>
+
+    <!-- Script -->
+    <script src="script/login.js"></script>
+  </body>
+</html>
