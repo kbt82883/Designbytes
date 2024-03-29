@@ -28,10 +28,16 @@ public class UserService {
     public UserDTO createUser(UserDTO userDTO) throws Exception {
         // TODO length Validation
         // TODO secure coding
+        // TODO Custom Exception
         try {
             String userId = userDTO.getUserId();
             String userName = userDTO.getUserName();
             String userPassword = userDTO.getUserPassword();
+
+            if (userId == null || userId.isEmpty() || userName == null || userName.isEmpty() || userPassword == null || userPassword.isEmpty()) {
+                throw new NullPointerException("필수값이 누락되었습니다.");
+            }
+
             Integer userRole = 1;
             char useYn = 'Y';
             LocalDateTime insertDt = LocalDateTime.now();
