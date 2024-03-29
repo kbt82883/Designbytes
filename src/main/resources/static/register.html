@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Designbytes</title>
+  </head>
+  <body>
+    <section class="register-wrapper">
+      <div class="register__header">
+        <span>designbytes</span>
+        <span>디자인바이츠에서 10배 빠르게 10배 싸게<br />쪼개서 공부하자</span>
+      </div>
+    </section>
+    <button class="login-with-kakao">카카오로 로그인</button>
+    <button class="login-with-google">구글아이디로 로그인</button>
+
+    <!-- 로그인 -->
+    <h2>로그인</h2>
+    <form method="post" action="" id="login-form">
+      <input type="text" name="userName" placeholder="이메일" />
+      <input type="password" name="userPassword" placeholder="비밀번호" />
+      <label for="remember-check">
+        <input type="checkbox" id="remember-check" />아이디 저장하기
+      </label>
+      <input type="submit" value="로그인" />
+    </form>
+    <button class="register-with-email">이메일로 회원가입</button>
+
+    <!-- 회원가입 -->
+    <h2>회원가입</h2>
+<!--    <form method="post" action="" id="login-form">-->
+<!--      <input id="email" type="text" name="userName" placeholder="이메일" />-->
+      <input id="userId" type="text" name="userName" placeholder="ID" />
+      <input id="userName" type="text" name="userName" placeholder="닉네임" />
+      <input type="password" id="password" type="password" name="userPassword" placeholder="비밀번호" />
+      <input type="password" id="confirmPassword" name="userPassword" placeholder="비밀번호 확인" />
+      <input id="register" type="button" value="이메일로 회원가입 완료하기" />
+<!--    </form>-->
+
+<!--    <input type="email" placeholder="이메일">-->
+<!--    <button>인증메일 발송</button>-->
+<!--    -->
+<!--    <input type="text" placeholder="인증번호">-->
+<!--    <button>확인</button>-->
+
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script>
+        $(document).ready(function () {
+
+          // 회원가입 버튼 클릭 이벤트
+          $("#register").click(function () {
+            const _userId = $("#userId").val();
+            const _userName = $("#userName").val();
+            const _password = $("#password").val();
+            const _confirmPassword = $("#confirmPassword").val();
+
+            // 공백값 체크
+            // TODO undefined 체크
+            if (_userId === "" || _userName === "" || _password === "" || _confirmPassword === "") {
+              alert("모든 값을 입력해주세요.");
+              return;
+            }
+
+            // 패스워드 확인란 비교
+            if (_password !== _confirmPassword) {
+              alert("비밀번호가 일치하지 않습니다.");
+              return;
+            }
+
+            $.ajax({
+              type: "POST",
+              url: "http://localhost:8080/api/user/create",
+              contentType: "application/json",
+              data: JSON.stringify(
+                      {
+                        userId: $("#userId").val(),
+                        userName: $("#userName").val(),
+                        userPassword: $("#password").val(),
+                      }
+              ),
+              success: function (response) {
+                alert(response.message);
+                console.log(response); // response 안의 내용 확인해보기
+              },
+              error: function (response) {
+                alert(response.responseJSON.message);
+              },
+            });
+
+          });
+        });
+    </script>
+  </body>
+</html>
